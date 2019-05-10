@@ -123,3 +123,20 @@ But first we have to add a rule and a plugin to make it work. The plugin is:
         ]
     }
     ```
+
+* In order for React to work on webpack, ```babel-loader``` rule must be changed to:
+
+    ```js
+    {   // Load babel loader. To understand js in all browsers
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+            loader: "babel-loader",
+            options: {
+                presets: ['@babel/preset-env', '@babel/preset-react']
+            }
+        }
+    }
+    ```
+
+    check previously that ```@babel/preset-react``` is installed.
