@@ -139,4 +139,20 @@ But first we have to add a rule and a plugin to make it work. The plugin is:
     }
     ```
 
-    check previously that ```@babel/preset-react``` is installed.
+    check previously that ```@babel/preset-react``` is installed. 
+
+* For running more complex JSX code we need to add to the package.json
+
+    ```js
+    "babel": {
+        "presets": [
+          "@babel/preset-env",
+          "@babel/preset-react"
+        ],
+        "plugins": [
+          "@babel/plugin-proposal-class-properties"
+        ]
+      },
+    ```
+
+    and install ```@babel/plugin-proposal-class-properties```.
