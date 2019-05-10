@@ -6,6 +6,7 @@ import './styles/main.scss'
 
 window.taskinput = document.getElementById('main');
 ReactDOM.render(<Main name="Matias"/>, window.taskinput)
+
 // const title = 'My Minimal React Webpack Babel Setup';
 
 // ReactDOM.render(
