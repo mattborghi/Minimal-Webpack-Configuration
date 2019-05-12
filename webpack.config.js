@@ -41,6 +41,12 @@ module.exports = {
                     "sass-loader"
                 ]
             },
+            // Configure Webpack to handle TypeScript
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/
+            }
         ]
     },
     plugins: [
