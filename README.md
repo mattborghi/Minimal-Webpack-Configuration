@@ -156,3 +156,34 @@ But first we have to add a rule and a plugin to make it work. The plugin is:
     ```
 
     and install ```@babel/plugin-proposal-class-properties```.
+
+* For adding compatibility with Typescript install the following packages:
+
+    ```sh
+    npm install --save-dev typescript ts-loader
+    ```
+
+    Now create a ```tsconfig.json``` file in the root directory and add the following code in order to compile Typescript code into ES5
+
+    ```sh
+    {
+      "compilerOptions": {
+        "outDir": "./dist/",
+        "noImplicitAny": true,
+        "module": "es6",
+        "target": "es5",
+        "jsx": "react",
+        "allowJs": true
+      }
+    }
+    ```
+
+    Finally add a new rule to ```webpack.config.js``` file:
+
+    ```js
+    {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/
+    }
+    ````
