@@ -1,0 +1,11 @@
+/* Define a variable as blue */
+/* $bg: cyan; */
+
+/* change the background color of the body */
+body {
+    background-color: lightblue; /*$bg;*/
+}
+
+.h1 {
+    color: red;
+  }
